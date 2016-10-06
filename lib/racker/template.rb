@@ -55,6 +55,7 @@ module Racker
         logger.debug("Processing post-processor: #{name}")
         packer['post-processors'] << config.dup unless config.nil?
       end
+      packer['post-processors'] = [packer['post-processors']]
 
       packer
     end
